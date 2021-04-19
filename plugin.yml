@@ -1,0 +1,60 @@
+name: PlayerVisibility
+main: fr.mrflamme26.playervisibility.PlayerVisibility
+version: 1.0
+api-version: 1.16
+description: Plugin pour rendre les joueurs visible/invisible
+author: MrFlamme26
+commands:
+  playervisibility:
+    description: Voir la liste des commandes
+  reload:
+    description: Recharger le plugin
+    permission: playervisibility.reload
+permissions:
+  playervisibility.*:
+    description: Donner toutes les permissions de PlayerVisbility
+    children:
+      playervisibility.item.hide: true
+      playervisibility.item.show: true
+      playervisibility.tool: true
+      playervisibility.reload: true
+      playervisibility.setItemName: true
+      playervisibility.setItemMessage: true
+      playervisibility.forceVisibility: true
+  -playervisibility.*:
+    description: Interdire toutes les permissions de PlayerVisbility
+    children:
+      playervisibility.item.hide: false
+      playervisibility.item.show: false
+      playervisibility.tool: false
+      playervisibility.reload: false
+      playervisibility.setItemName: false
+      playervisibility.setItemMessage: false
+      playervisibility.forceVisibility: false
+  playervisibility.item.hide:
+    description: Rendre les joueurs invisibles
+    default: true
+  playervisibility.item.show:
+    description: Rendre les joueurs visibles
+    default: true
+  playervisibility.tool:
+    description: Donner l'item d'activation pour rendre visible/invisible les joueurs
+    default: op
+  playervisibility.reload:
+    description: Permet de recharger le plugin
+    default: op
+  playervisibility.setItemName:
+    description: Permet de changer le nom de l'item d'activation
+    default: op
+  playervisibility.setItemMessage:
+    description: Permet de changer le message de l'item d'activation
+    default: op
+  playervisibility.item.use:
+    description: Permet a un joueur d'utiliser l'item d'activation
+    default: true
+    children:
+      playervisibility.item.hide: true
+      playervisibility.item.show: true
+  playervisibility.forceVisibility:
+    description: Permet de rendre le joueur toujours visible aux yeux des autres
+    default: op

@@ -1,0 +1,41 @@
+# Fichier de configuration de PlayerVisibility
+# Un plugin développé par MrFlamme26
+
+PlayerVisibility:
+# Item pour rendre invisible les joueurs.
+  itemPlayersON: LEGACY_SLIME_BALL
+
+# Item pour rendre visible les joueurs.
+  itemPlayersOFF: MAGMA_CREAM
+
+# Emplacement de l'item dans l'inventaire.
+  inventorySlot: 1
+
+# Delais d'exécution entre deux activations (en secondes).
+  cooldownTime: 5
+
+# Nom de l'item d'activation les joueurs sont invisibles.
+  itemNameON: '&eVisibilité des joueurs : &aON'
+
+# Nom de l'item d'activation les joueurs sont visibles.
+  itemNameOFF: '&eVisibilité des joueurs : &cOFF'
+
+# Liste des mondes ou l'utilisation du plugin est possible.
+activatedWorlds:
+  - world
+
+# Configuration des messages.
+messages:
+  consoleError: "&f[&ePlayerVisibility&f] &cImpossible d'exécuter des commandes depuis la console !"
+  playersON: "&f[&ePlayerVisibility&f] &aLes joueurs sont maintenant visibles !"
+  playersOFF: "&f[&ePlayerVisibility&f] &cLes joueurs sont maintenant invisibles !"
+  permissionError: "&f[&ePlayerVisibility&f] &cVous n'avez pas la permission pour exécuter cette action !"
+  commandError: "&f[&ePlayerVisibility&f] &cCette commande est inconnue."
+  configurationReloaded: "&f[&ePlayerVisibility&f] &eConfiguration rechargée avec succés."
+  itemName: "&f[&ePlayerVisibility&f] &a%type% &8>> &a%args%"
+  itemMessage: "&f[&ePlayerVisibility&f] &a%type% &8>> &a%args%"
+
+# Conditions dans lesquelles on donne l'item d'activation au joueur.
+others:
+  giveOnJoin: true
+  giveOnRespawn: true
