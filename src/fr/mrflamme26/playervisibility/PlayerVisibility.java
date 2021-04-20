@@ -13,6 +13,7 @@ import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,6 +22,7 @@ import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -330,6 +332,8 @@ public class PlayerVisibility extends JavaPlugin implements Listener {
 		ItemMeta meta = vanishItem.getItemMeta();
 		
 		meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', getConfig().getString(itemNamePath)));
+		meta.addEnchant(Enchantment.DURABILITY, 1, false);
+		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		vanishItem.setItemMeta(meta);
 		
 		return vanishItem;
