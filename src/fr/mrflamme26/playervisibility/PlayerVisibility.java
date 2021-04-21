@@ -9,7 +9,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
-import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -347,8 +346,7 @@ public class PlayerVisibility extends JavaPlugin implements Listener {
 			}
 		}
 		
-		World w = player.getWorld();
-		w.playSound(player.getLocation(), Sound.BLOCK_FIRE_EXTINGUISH, 5, 1);
+		player.playSound(player.getLocation(), Sound.BLOCK_FIRE_EXTINGUISH, 5, 0);
 
 		player.getInventory().removeItem(makeVanishItem(true));
 		player.getInventory().setItemInMainHand(makeVanishItem(false));
@@ -356,6 +354,7 @@ public class PlayerVisibility extends JavaPlugin implements Listener {
 		sendMessage("playersOFF", player);
 
 		if (isHidingPlayers.get(player) == null) {
+			isHidingPlayers.put(player, true);
 			isHidingPlayers.put(player, true);
 		}
 	}
@@ -367,8 +366,7 @@ public class PlayerVisibility extends JavaPlugin implements Listener {
 		}
 		
 		if (!join) {
-			World w = player.getWorld();
-			w.playSound(player.getLocation(), Sound.ENTITY_SLIME_JUMP, 5, 1);
+			player.playSound(player.getLocation(), Sound.ENTITY_SLIME_JUMP, 5, 0);
 
 			player.getInventory().removeItem(makeVanishItem(false));
 			player.getInventory().setItemInMainHand(makeVanishItem(true));
