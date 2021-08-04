@@ -18,3 +18,11 @@ Plugin Minecraft : Rendre les joueurs visibles/invisibles à l'aide d'un item d'
 
 Ce projet est libre de modification mais vous ne devez en aucun cas effacer mon nom des auteurs du plugin.
 Le non respect de ces conditions pourrait entraîner des poursuite en justice à votre encontre ou à celle de votre organisation.
+
+## Serveur Minecraft de qualité et à un prix défiant toute concurrence !
+
+Vous recherchez un hébergeur de qualité pour votre serveur Minecraft ? MineStrator à la solution la plus adaptée à vos besoins.
+Serveur entièrement configurable, avec une interface de gestion avancée, vous serez mettre de ce dernier comme personne.
+Vous souhaitez en savoir plus, rendez vous sur le site : [MineStrator](https://minestrator.com/?partner=nraha3238k "Lien vers le site de MineStrator !")
+
+![MineStrator](https://cdn.discordapp.com/attachments/856518464009273384/857265240562335758/LOGOTYPES_Plan_de_travail_1.png)
